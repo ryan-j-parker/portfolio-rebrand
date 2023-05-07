@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: black;
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow: auto;
+  overflow-y: scroll;
+  font-size: 2rem;
+  color: black;
+  background: yellow;
+}
