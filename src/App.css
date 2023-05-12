@@ -8,14 +8,17 @@ html {
   background: black;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 .App {
   text-align: center;
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  overflow: auto;
-  overflow-y: scroll;
   font-size: 2rem;
   color: black;
-  background: yellow;
+  background: rgb(29, 28, 26);
 }

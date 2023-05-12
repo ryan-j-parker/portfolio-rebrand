@@ -10,28 +10,27 @@ import {
 import { Canvas } from "@react-three/fiber";
 import React, { useRef } from "react";
 import * as THREE from "three";
+import FancyText from "./FancyText";
 
-function BigText() {
-  const matcaps = useTexture(["/matcapBl2.png", "/matcapOR3.png"]);
-  const textRef = useRef();
+function DownArrow() {
   return (
-    <group
-      ref={textRef}
-      position={[0, 2, 0]}
-      rotation={[Math.PI * 0.125, 0, 0]}
-    >
-      <Center>
-        <Text3D size={0.15} font={"/Righteous_Regular.json"}>
-          Ryan J. Parker
-          <meshMatcapMaterial matcap={matcaps[1]} />
-        </Text3D>
-      </Center>
-    </group>
+    <Center>
+      <Html
+        style={{
+          position: "sticky",
+          bottom: "0",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
+        <img src="/down-arrow.png" alt="down arrow" />
+      </Html>
+    </Center>
   );
 }
 
 function Experience() {
-  //   window.addEventListener("wheel", onMouseWheel);
+  window.addEventListener("wheel", onMouseWheel);
 
   const camera = new THREE.PerspectiveCamera(
     75,
@@ -46,9 +45,10 @@ function Experience() {
 
   return (
     <Canvas style={{ height: "500vh", width: "100%" }}>
+      <OrbitControls makeDefault enableZoom={false} />
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} />
-      {/* <BigText /> */}
+      <FancyText />
       <Html>
         <div>
           <p>"Hello World"</p>
@@ -60,6 +60,7 @@ function Experience() {
         <boxGeometry args={[0.1, 0.1, 0.1]} />
         <meshStandardMaterial color="hotpink" />
       </mesh>
+      <DownArrow />
     </Canvas>
   );
 }
