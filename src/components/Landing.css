@@ -1,3 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anonymous+Pro&family=Bungee&family=Chicle&family=Holtwood+One+SC&family=Rubik+Mono+One&family=Secular+One&family=Special+Elite&display=swap");
+
+:root {
+  --Alfa: "Alfa Slab One";
+  --Anon: "Anonymous Pro";
+  --Bungee: "Bungee";
+  --Chicle: "Chicle";
+  --Holtwood: "Holtwood One SC";
+  --Rubik: "Rubik Mono One";
+  --Secular: "Secular One";
+  --Special: "Special Elite";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .landing {
-  background: url(https://images.unsplash.com/photo-1517245386807-5b1d67a616);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+}
+
+.bg-box {
+  z-index: 0;
+  position: absolute;
+  height: 20vh;
+  width: 100vw;
+  background: url("/public/aerial-forest1.jpg");
+  background-size: cover;
+  display: flex;
+  border: 2px dotted yellow;
+}
+
+.box {
+  z-index: 1;
+  border: 2px dotted hotpink;
+  height: 20vh;
+  width: 100%;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: "Courier New", Courier, monospace;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.box1 {
+  font-size: 6rem;
+  font-weight: 400;
+}
+
+.box2 {
+  font-size: 3rem;
+  font-weight: 400;
 }

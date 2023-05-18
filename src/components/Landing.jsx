@@ -4,9 +4,11 @@ import "./Landing.css";
 export default function Landing() {
   return (
     <div className="landing">
-      <div className="box1"></div>
-      <div className="box2"></div>
-      <div className="box3"></div>
+      <div className="bg-box"></div>
+      <div className="box box1">
+        Ryan J. Parker <br />
+        <span className="box2">Creative Frontend Developer</span>
+      </div>
     </div>
   );
 }
